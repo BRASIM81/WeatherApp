@@ -10,6 +10,11 @@ body{
 	border-radius: 5px;
 	/* box-sizing: border-box; */
 }
+@media (max-width: 768px){
+	.card{
+		width: 85vw;
+	}
+}
 .card-body form {
 	display: flex;
 	justify-content: space-between;
