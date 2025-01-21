@@ -1,0 +1,154 @@
+body{
+	background: #000;
+}
+.card {
+	width: 30vw;
+	background: #444;
+	color: #fff;
+	margin: 50px auto;
+	position: relative;
+	border-radius: 5px;
+	/* box-sizing: border-box; */
+}
+.card-body form {
+	display: flex;
+	justify-content: space-between;
+	outline: 1px solid #fff3;
+	border-radius: 10px;
+}
+.card-body form input, .card-body form button {
+	border: none;
+	background-color: transparent;
+	outline: none;
+	padding: 10px;
+	color: #ccc;
+}
+.card-body form i {
+	color: #fff;
+	opacity: .7;
+}
+.card-body .result {
+	padding-top: 20px;
+	text-align: center;
+}
+.card-body .result .name {
+	font-weight: bold;
+	font-size: large;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+.card-body .temp img {
+	width: 150px;
+	filter: drop-shadow(0 10px 50px #000);
+}
+.card-body .temp figcaption {
+	font-size: 3rem;
+}
+.card-body .desc {
+	font-size: 1.5rem;
+	text-transform: capitalize;
+}
+.card-body ul {
+	padding: 0;
+	list-style: none;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 10px;
+}
+.card-body ul li {
+	background-color: #f78a55;
+	color: #fff;
+	border-radius: 10px;
+	padding: 20px 10px;
+	background-image: linear-gradient(to bottom, transparent 50%, #0003 50%);
+	font-weight: bold;
+	font-size: small;
+}
+.card-body ul li i {
+	font-size: 2.5em;
+	display: block !important;
+	margin: 20px 0;
+}
+@property --angle{
+	syntax: "<angle>";
+	initial-value: 0deg;
+	inherits: false;
+}
+.card::after, .card::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 100%;
+	width: 100%;
+	translate: -50% -50%;
+	background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095);
+	z-index: -1;
+	border-radius: 5px;
+	padding: 5px;
+	animation: 3s spin linear infinite;
+	box-sizing: content-box;
+}
+.card::before{
+	filter: blur(30px);
+	opacity: .7;
+}
+.btn{
+	min-width: 10vw;
+	color: #fff;
+	font-size: 1.3rem;
+	margin: 20px auto;
+	margin-left: 20px;
+	padding: 1em 1.5em;
+	background-color: black;
+	position: relative;
+}
+.btn::after, .btn::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 100%;
+	width: 100%;
+	translate: -50% -50%;
+	background-image: conic-gradient(from var(--angle), transparent 70%, rgb(0, 255, 217));
+	z-index: -1;
+	border-radius: 5px;
+	padding: 3px;
+	animation: 3s spin linear infinite;
+	box-sizing: content-box;
+}
+.btn::before{
+	filter: blur(15px);
+	opacity: .6;
+}
+@keyframes spin {
+	from{
+		--angle: 0deg;
+	}
+	to{
+		--angle: 360deg;
+	}
+}
+.card.error{
+	animation: errorEffect 0.3s linear 1; 
+}
+@keyframes errorEffect {
+	0%{
+		transform: translate(10px, 5px);
+	}
+	25%{
+		transform: translate(-15px, -3px);
+	}
+	50%{
+		transform: translate(8px, 15px);
+	}
+	75%{
+		transform: translate(-2px, -6px);
+	}
+	100%{
+		transform: translate(0, 0);
+	}
+}
