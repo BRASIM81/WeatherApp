@@ -1,6 +1,7 @@
 let valueSearch = document.getElementById('ValueSearch');
 let city = document.getElementById('city');
 let temprature = document.getElementById('temp');
+let feelLike = document.getElementById('feelLike');
 let desc = document.getElementById('desc');
 let form = document.querySelector('form');
 let cloud = document.getElementById('cloud');
@@ -26,6 +27,7 @@ const searchWeather = () => {
 			city.querySelector('img').src= 'https://flagsapi.com/'+data.sys.country+'/shiny/32.png';
 			temprature.querySelector('img').src= 'https://openweathermap.org/img/wn/'+data.weather[0].icon+'@4x.png';
 			temprature.querySelector('figcaption span').innerText = data.main.temp;
+			feelLike.innerHTML = 'Feels like ' +data.main.feels_like+'<sup>o</sup><br>Min '+data.main.temp_min+'<sup>o</sup> Max '+data.main.temp_max+'<sup>o</sup>';
 			desc.innerText = data.weather[0].description;
 			cloud.innerText = data.clouds.all;
 			rain.innerText = data.main.humidity;

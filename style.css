@@ -51,6 +51,9 @@ body{
 .card-body .temp figcaption {
 	font-size: 3rem;
 }
+#feelLike{
+	font-size: 1.3rem;
+}
 .card-body .desc {
 	font-size: 1.5rem;
 	text-transform: capitalize;
