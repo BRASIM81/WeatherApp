@@ -6,7 +6,8 @@ let desc = document.getElementById('desc');
 let form = document.querySelector('form');
 let cloud = document.getElementById('cloud');
 let rain = document.getElementById('rain');
-let pressure = document.getElementById('pressure');
+let wind = document.getElementById('wind');
+let gust = document.getElementById('gusts');
 let card = document.querySelector('.card');
 
 form.addEventListener('submit', (event) => {
@@ -31,7 +32,8 @@ const searchWeather = () => {
 			desc.innerText = data.weather[0].description;
 			cloud.innerText = data.clouds.all;
 			rain.innerText = data.main.humidity;
-			pressure.innerText = data.main.pressure;
+			wind.innerText = data.wind.speed;
+			gust.innerText = 'Gusts of ' +data.wind.gust;
 		}else{
 			card.classList.add('error');
 			setTimeout(() => {
