@@ -1,11 +1,16 @@
 body{
-	background: #000;
+	min-height: 100svh;
+	background: url(bg.jpg) no-repeat;
+	background-position: center;
+	background-size: cover;
+	backdrop-filter: blur(10px);
+	padding-top: 50px;
 }
 .card {
 	width: 40vw;
-	background: #444;
+	background: hsl(261, 25%, 25%);
 	color: #fff;
-	margin: 50px auto;
+	margin: 0 auto;
 	position: relative;
 	border-radius: 5px;
 	/* box-sizing: border-box; */
