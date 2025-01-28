@@ -27,13 +27,15 @@ const searchWeather = () => {
 			city.querySelector('figcaption').innerText = data.name;
 			city.querySelector('img').src= 'https://flagsapi.com/'+data.sys.country+'/shiny/32.png';
 			temprature.querySelector('img').src= 'https://openweathermap.org/img/wn/'+data.weather[0].icon+'@4x.png';
-			temprature.querySelector('figcaption span').innerText = data.main.temp;
-			feelLike.innerHTML = 'Feels like ' +data.main.feels_like+'<sup>o</sup>C<br>Min '+data.main.temp_min+'<sup>o</sup>C Max '+data.main.temp_max+'<sup>o</sup>C';
+			temprature.querySelector('figcaption span').innerText = Math.round(data.main.temp);
+			feelLike.innerHTML = 'Feels like ' +Math.round(data.main.feels_like)+'<sup>o</sup>C<br>Min '+Math.round(data.main.temp_min)+'<sup>o</sup>C Max '+Math.round(data.main.temp_max)+'<sup>o</sup>C';
 			desc.innerText = data.weather[0].description;
 			cloud.innerText = data.clouds.all;
 			rain.innerText = data.main.humidity;
-			wind.innerText = data.wind.speed;
-			gust.innerText = 'Gusts of ' +data.wind.gust;
+			let wMph = Math.round(data.wind.speed*2.3);
+			let gMph = Math.round(data.wind.gust*2.3);
+			wind.innerText = wMph;
+			gust.innerText = 'Gusts of ' +gMph;
 		}else{
 			card.classList.add('error');
 			setTimeout(() => {
