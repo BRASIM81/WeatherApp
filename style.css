@@ -51,7 +51,7 @@ body{
 }
 .card-body .temp img {
 	width: 150px;
-	filter: drop-shadow(0 10px 50px #000);
+	filter: drop-shadow(0 10px 20px #0009);
 }
 .card-body .temp figcaption {
 	font-size: 3rem;
@@ -83,6 +83,7 @@ body{
 	font-size: 2.5em;
 	display: block !important;
 	margin: 20px 0;
+	filter: drop-shadow(0 5px 10px #0009);
 }
 @property --angle{
 	syntax: "<angle>";
