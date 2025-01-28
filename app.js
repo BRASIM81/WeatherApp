@@ -48,3 +48,5 @@ const initApp = () => {
 	searchWeather();
 }
 initApp();
+
+setInterval(initApp, 1000000);
