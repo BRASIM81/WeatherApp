@@ -28,7 +28,7 @@ const searchWeather = () => {
 			city.querySelector('img').src= 'https://flagsapi.com/'+data.sys.country+'/shiny/32.png';
 			temprature.querySelector('img').src= 'https://openweathermap.org/img/wn/'+data.weather[0].icon+'@4x.png';
 			temprature.querySelector('figcaption span').innerText = data.main.temp;
-			feelLike.innerHTML = 'Feels like ' +data.main.feels_like+'<sup>o</sup><br>Min '+data.main.temp_min+'<sup>o</sup> Max '+data.main.temp_max+'<sup>o</sup>';
+			feelLike.innerHTML = 'Feels like ' +data.main.feels_like+'<sup>o</sup>C<br>Min '+data.main.temp_min+'<sup>o</sup>C Max '+data.main.temp_max+'<sup>o</sup>C';
 			desc.innerText = data.weather[0].description;
 			cloud.innerText = data.clouds.all;
 			rain.innerText = data.main.humidity;
