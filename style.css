@@ -1,16 +1,18 @@
 body{
 	min-height: 100svh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	background: url(bg.jpg) no-repeat;
 	background-position: center;
 	background-size: cover;
 	backdrop-filter: blur(10px);
-	padding-top: 50px;
+	/* padding-top: 50px; */
 }
 .card {
 	width: 40vw;
 	background: hsl(261, 25%, 25%);
 	color: #fff;
-	margin: 0 auto;
 	position: relative;
 	border-radius: 5px;
 	/* box-sizing: border-box; */
@@ -51,7 +53,7 @@ body{
 }
 .card-body .temp img {
 	width: 150px;
-	filter: drop-shadow(0 10px 20px #0009);
+	filter: drop-shadow(0 10px 20px hsla(0, 0%, 0%, 0.6));
 }
 .card-body .temp figcaption {
 	font-size: 3rem;
@@ -71,8 +73,8 @@ body{
 	gap: 10px;
 }
 .card-body ul li {
-	background-color: #f78a55;
-	color: #fff;
+	background-color: hsl(20, 91%, 65%);
+	color: hsl(0, 0%, 100%);
 	border-radius: 10px;
 	padding: 20px 10px;
 	background-image: linear-gradient(to bottom, transparent 55%, #0002 35%);

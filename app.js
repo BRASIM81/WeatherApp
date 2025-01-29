@@ -32,8 +32,8 @@ const searchWeather = () => {
 			desc.innerText = data.weather[0].description;
 			cloud.innerText = data.clouds.all;
 			rain.innerText = data.main.humidity;
-			let wMph = Math.round(data.wind.speed*2.3);
-			let gMph = Math.round(data.wind.gust*2.3);
+			let wMph = Math.round(data.wind.speed*2.237);
+			let gMph = Math.round(data.wind.gust*2.237);
 			wind.innerText = wMph;
 			gust.innerText = 'Gusts of ' +gMph;
 		}else{
